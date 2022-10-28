@@ -1,8 +1,14 @@
-import x from 'prop-types'
+import PropTypes from 'prop-types'
 
-export function Button({text}){
-    console.log(text)
-    return <button>
-        {text}
+export function Button({text,name}){
+
+    return <button onClick={function(){
+        console.log('Hola Mundo')
+    }}>
+        {text} -{name}
     </button>
+}
+
+Button.defaultProps={
+    name: 'Some User'
 }
